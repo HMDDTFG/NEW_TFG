@@ -1,0 +1,428 @@
+/* Estilos generales */
+:root {
+    --cabeceraBody: #14213D;
+    --productos: #d5bdaf;
+    --container: #E5E5E5;
+    --red_dark: #780000;
+    --magician_red:#c1121f;
+    --cake_blue:#669bbc;
+}
+
+* {
+    text-decoration: none;
+
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cabeceraBody);
+}
+
+/* Estilos para el encabezado */
+.cabecera {
+    height: 35px;
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color: var(--cabeceraBody);
+    z-index: 10;
+}
+
+#cab_usuario {
+    padding-right: 8px;
+}
+
+.subcabecera {
+    background-color: var(--productos);
+    color: #fff;
+    padding: 10px;
+    z-index: 10;
+    height: 100px;
+    display: flex;
+    margin-top: 35px;
+    position: fixed;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+header.CLASE {
+    height: 35px;
+}
+
+.subcabecera div {
+    width: 40%;
+    align-items: flex-start;
+
+}
+
+#menu {
+    font-size: 3em;
+    margin-left: 30%;
+    margin-top: -5%;
+}
+
+#cesta {
+    font-size: 3em;
+}
+
+#div_menu {
+    display: flex;
+    align-items: center;
+}
+
+#logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div_cesta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 40px
+}
+
+#logo {
+    height: 80px;
+    margin-left: -14%;
+}
+
+/* Estilos para el contenido */
+
+#fondo_contenido {
+    background-color: var(--cabeceraBody);
+    padding-top: 145px;
+}
+
+.container {
+    background-color: var(--container);
+    border-radius: 1%;
+}
+
+#container {
+    background-color: var(--container);
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+
+h1 {
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+.producto {
+    background-color: var(--productos);
+    border-radius: 4px;
+}
+
+.div_imgproducto {
+    width: 100%;
+    padding-left: 7%;
+    height: 150px;
+    padding-top: 8%;
+    border-radius: 10px;
+}
+
+.imgproducto {
+    width: 86%;
+    height: 150px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.datosproducto {
+    color: #fff;
+    margin-left: 10%;
+}
+
+.nombreproducto {
+    font-size: medium;
+}
+
+.descripcion {
+    font-size: small;
+}
+
+.precioproducto {
+    font-size: medium;
+}
+
+.cestaplus {
+    font-style: 1em;
+}
+
+.rojo {
+    display: flex;
+    flex-direction: column;
+}
+
+.precio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Carrusel de la página index */
+.carrusel {
+    width: 75%;
+    margin-top: 30px;
+    margin-left: 12.5%;
+    height: 240px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.carrusel-slide {
+    width: 97%;
+    height: 220px;
+    background-color: var(--magician_red);
+    align-items: center;
+    justify-content: center;
+    border-radius: 2%;
+    display: flex;
+
+}
+
+.imgcarrusel {
+    width: 100%;
+    height: 220px;
+    border-radius: 2%;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: var(--productos);
+    color: rgb(5, 47, 64);
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* A partir de aquí es el desplegable ya montado. */
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 100%;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgb(5, 47, 64);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    border-top: 35px solid var(--productos);
+}
+
+.sidebar .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+
+}
+
+.sidebar ul,
+.sidebar li {
+    margin: 0;
+    padding: 0;
+    list-style: none inside;
+}
+
+.sidebar ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width: 200px;
+}
+
+.sidebar a {
+    display: block;
+    font-size: 120%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.opciones:hover {
+    color: #fff;
+    background-color: var(--container);
+
+}
+
+#botoninicio:hover {
+    color: #fff;
+    background-color: var(--container);
+
+}
+
+#botonquien:hover {
+    color: #fff;
+    background-color: var(--container);
+}
+
+#equis:hover {
+    color: #fff;
+    background-color: var(--container);
+}
+
+#contenido {
+    transition: margin-left .4s;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.abrir-cerrar {
+    color: #2E88C7;
+    font-size: 1rem;
+}
+
+
+#cerrar {
+    display: none;
+}
+
+/* MENÚ */
+
+.titulo {
+    font-size: larger;
+    font-weight: 900;
+    margin-bottom: 6%;
+}
+
+.separacion {
+    border: 3px solid var(--productos);
+    margin-bottom: 6%;
+}
+
+.opciones {
+    font-weight: 500;
+    margin-bottom: 7%;
+    margin-top: -2%;
+    margin-left: 13%;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 300px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro semitransparente */
+    z-index: 999;
+    /* Asegúrate de que esté por encima del resto del contenido */
+    display: none;
+    /* Inicialmente oculto */
+}
+
+#id {
+    font-size: 8em;
+    /* NO FUNCONA REVISAR LUEGO*/
+}
+
+.rrss {
+    width: 18%;
+    height: 30px;
+    margin-left: 20%;
+}
+
+/*PAGINA QUIENES SOMOS*/
+.parr_quien {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: 500;
+}
+
+#ultparr {
+    margin-bottom: 40px;
+    height: 130px;
+}
+
+.imagenquien {
+    width: 20%;
+    height: 120px;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 5px solid black;
+}
+
+/*PAGINA CONTACTO*/
+#telefono {
+    margin-left: 43%;
+}
+
+#text_form {
+    margin-top: 40px;
+}
+
+.text_formulario {
+    font-weight: 700;
+    margin-left: 5%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+#primer_item {
+    margin-top: 10px;
+}
+
+.contactoform {
+    border: 5px solid rgb(5, 47, 64);
+    border-radius: 5px;
+    width: 40%;
+    margin-left: 30%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#enviar_form {
+    margin-left: 43%;
+    margin-bottom: 20px;
+    background-color: rgb(5, 47, 64);
+    color: #fff;
+}
+
+#no {
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+}
+.nombre {
+    align-self: flex-start;
+}
+
+
+.carro {
+    width: 26px;
+    height: 26px;
+}
