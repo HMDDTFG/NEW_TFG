@@ -7,9 +7,10 @@
     <title>CyberSphere Technologies</title>
     <script src="https://kit.fontawesome.com/ce9416b376.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="index.js"></script>
 </head>
 
@@ -27,9 +28,9 @@
                 <li><a class="titulo" id="botonquien" href="quiensomos.html">¿QUIÉNES SOMOS?</a></li>
                 <li><a class="separacion"></a></li>
                 <li><a class="titulo">PRODUCTOS</a></li>
-                <li><a class="opciones" href="marcas.html">POR MARCAS</a></li>
-                <li><a class="opciones" href="masprecio.html">MÁS CAROS</a></li>
-                <li><a class="opciones" href="menosprecio.html">MÁS BARATOS</a></li>
+                <li><a class="opciones">POR MARCAS</a></li>
+                <li><a class="opciones price-sorting-link" href="#" data-sort="h2l">MÁS CAROS</a></li>
+                <li><a class="opciones price-sorting-link" href="#" data-sort="l2h">MÁS BARATOS</a></li>
                 <li><a class="separacion"></a></li>
                 <li><a class="titulo">AYUDA Y AJUSTES</a></li>
                 <li><a class="opciones" href="micuenta.html">MI CUENTA</a></li>
@@ -66,91 +67,91 @@
                 </div>
             </div>
             <h3 id="no">Recomendado para ti</h3>
-            <div class="row">
+            <div class="products-grid row">
                 <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center">
+                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="400.00">
                         <img class="img-fluid" src="./img/OIP.png">
                         <h2 class="nombre">NOMBRE</h2>
                         <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
                         <div class="precio">
-                            <h3 class="">XX.XX€</h3>
+                            <h3 class="price">400.00</h3>
                             <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center">
+                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="599.99">
                         <img class="img-fluid" src="./img/OIP.png">
                         <h2 class="nombre">NOMBRE</h2>
                         <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
                         <div class="precio">
-                            <h3 class="">XX.XX€</h3>
+                            <h3 class="price">599.99</h3>
                             <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center">
+                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="1099.99">
                         <img class="img-fluid" src="./img/OIP.png">
                         <h2 class="nombre">NOMBRE</h2>
                         <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
                         <div class="precio">
-                            <h3 class="">XX.XX€</h3>
+                            <h3 class="price">1099.99</h3>
                             <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center">
+                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="1200.00">
                         <img class="img-fluid" src="./img/OIP.png">
                         <h2 class="nombre">NOMBRE</h2>
                         <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
                         <div class="precio">
-                            <h3 class="">XX.XX€</h3>
+                            <h3 class="price">1200.00</h3>
                             <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center">
+                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="750.45">
                         <img class="img-fluid" src="./img/OIP.png">
                         <h2 class="nombre">NOMBRE</h2>
                         <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
                         <div class="precio">
-                            <h3 class="">XX.XX€</h3>
+                            <h3 class="price">750.45</h3>
                             <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center">
+                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="200.00">
                         <img class="img-fluid" src="./img/OIP.png">
                         <h2 class="nombre">NOMBRE</h2>
                         <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
                         <div class="precio">
-                            <h3 class="">XX.XX€</h3>
+                            <h3 class="price">200.00</h3>
                             <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center">
+                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="1010.90">
                         <img class="img-fluid" src="./img/OIP.png">
                         <h2 class="nombre">NOMBRE</h2>
                         <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
                         <div class="precio">
-                            <h3 class="">XX.XX€</h3>
+                            <h3 class="price">1010.90</h3>
                             <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center">
+                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="547.80">
                         <img class="img-fluid" src="./img/OIP.png">
                         <h2 class="nombre">NOMBRE</h2>
                         <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
                         <div class="precio">
-                            <h3 class="">XX.XX€</h3>
+                            <h3 class="price">547.80</h3>
                             <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
                         </div>
                     </div>
@@ -163,5 +164,4 @@
         <p>&copy; 2024 CyberSphere Technologies. David Díaz y Héctor Marín.</p>
     </footer>
 </body>
-
 </html>
