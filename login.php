@@ -5,7 +5,6 @@ session_start();
 
 // Incluir el archivo de conexión
 $servername = "localhost";
-//$port = 9550; //especificamos puerto si no es el 3306
 $username = "root";
 $password = "";
 $dbname = "store";

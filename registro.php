@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo "Registro exitoso";
-        header("Location: login.html"); // Redirigir a la página de inicio después del registro
+        header("Location: login.html"); // Redirigir a la página de inicio de sesión después del registro
         exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
