@@ -36,8 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verificar la contraseña
         if (password_verify($password, $user['password'])) {
             // Las credenciales son correctas, iniciar sesión
-            $_SESSION['username'] = $user['username'];
-            header("Location: index.html"); // Redirigir a la página de inicio
+            $_SESSION['id_usuario'] = $user['id_usuario'];
+            header("Location: index.php"); // Redirigir a la página de inicio
             exit;
         } else {
             // La contraseña es incorrecta
