@@ -124,6 +124,9 @@ h1 {
     background-color: var(--productos);
     border-radius: 4px;
 }
+.description{
+    height: 72px;
+}
 
 .div_imgproducto {
     width: 100%;
@@ -327,6 +330,10 @@ body {
     margin-top: -2%;
     margin-left: 13%;
 }
+.nombre{
+    font-size: large;
+    font-weight: bold;
+}
 
 #overlay {
     position: fixed;
@@ -425,4 +432,9 @@ body {
 .carro {
     width: 26px;
     height: 26px;
+}
+.img-fluid{
+    height: 245px !important;
+    max-width: 245px;
+    width: auto;
 }

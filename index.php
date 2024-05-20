@@ -22,7 +22,7 @@
             $username = htmlspecialchars($_SESSION['id_usuario'], ENT_QUOTES, 'UTF-8');
             echo "<a id=\"cab_usuario\" class=\"px-2\" href=\"micuenta.php\" style=\"color: #ffffff;\">$username</a>";
         } else {
-            echo "<a id=\"cab_usuario\" class=\"px-2\" href=\"login.html\" style=\"color: #ffffff;\">Identifícate</a>";
+            echo "<a id=\"cab_usuario\" class=\"px-2\" href=\"login.php\" style=\"color: #ffffff;\">Identifícate</a>";
         }
         ?>
     </div>
@@ -42,7 +42,14 @@
                 <li><a class="titulo">AYUDA Y AJUSTES</a></li>
                 <li><a class="opciones" href="micuenta.php">MI CUENTA</a></li>
                 <li><a class="opciones" href="contacto.php">ATENCIÓN AL CLIENTE</a></li>
-                <li><a class="opciones" href="login.html">IDENTIFICARSE</a></li>
+                <?php 
+                    if (isset($_SESSION['id_usuario'])) {
+                     
+                     echo "<li><a class=\"opciones\" href=\"login.php\">OTRA CUENTA</a></li>";
+                     } else {
+                    echo "<li><a class=\"opciones\" href=\"login.php\">IDENTIFICARSE</a></li>";
+                    }
+                ?>
                 <li><a class="separacion"></a></li>
                 <li><a class="titulo">ENCUENTRANOS AQUÍ</a></li>
                 <img class="rrss" src="./img/instagram.png"><img id="twitter" class="rrss" src="./img/twitter.png">
@@ -75,94 +82,43 @@
             </div>
             <h3 id="no">Recomendado para ti</h3>
             <div class="products-grid row">
-                <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="400.00">
-                        <img class="img-fluid" src="./img/OIP.png">
-                        <h2 class="nombre">NOMBRE</h2>
-                        <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
-                        <div class="precio">
-                            <h3 class="price">400.00</h3>
-                            <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="599.99">
-                        <img class="img-fluid" src="./img/OIP.png">
-                        <h2 class="nombre">NOMBRE</h2>
-                        <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
-                        <div class="precio">
-                            <h3 class="price">599.99</h3>
-                            <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="1099.99">
-                        <img class="img-fluid" src="./img/OIP.png">
-                        <h2 class="nombre">NOMBRE</h2>
-                        <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
-                        <div class="precio">
-                            <h3 class="price">1099.99</h3>
-                            <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="1200.00">
-                        <img class="img-fluid" src="./img/OIP.png">
-                        <h2 class="nombre">NOMBRE</h2>
-                        <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
-                        <div class="precio">
-                            <h3 class="price">1200.00</h3>
-                            <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="750.45">
-                        <img class="img-fluid" src="./img/OIP.png">
-                        <h2 class="nombre">NOMBRE</h2>
-                        <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
-                        <div class="precio">
-                            <h3 class="price">750.45</h3>
-                            <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="200.00">
-                        <img class="img-fluid" src="./img/OIP.png">
-                        <h2 class="nombre">NOMBRE</h2>
-                        <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
-                        <div class="precio">
-                            <h3 class="price">200.00</h3>
-                            <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="1010.90">
-                        <img class="img-fluid" src="./img/OIP.png">
-                        <h2 class="nombre">NOMBRE</h2>
-                        <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
-                        <div class="precio">
-                            <h3 class="price">1010.90</h3>
-                            <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="547.80">
-                        <img class="img-fluid" src="./img/OIP.png">
-                        <h2 class="nombre">NOMBRE</h2>
-                        <p class="">Descripción del producto : xxxxxxxxxxxxxx</p>
-                        <div class="precio">
-                            <h3 class="price">547.80</h3>
-                            <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>
-                        </div>
-                    </div>
-                </div>
+            <?php
+// Incluir el archivo de conexión
+    include 'conexion.php';
+
+    // Consulta SQL para obtener los productos
+    $sql = "SELECT nombre, descripcion, precio_ud, imagen, marca FROM PRODUCTO";
+    $stmt = $conn->query($sql);
+
+    // Verificar si hay productos
+    if ($stmt->rowCount() > 0) {
+        // Generar HTML para cada producto
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $nombre = $row["nombre"];
+            $descripcion = $row["descripcion"];
+            $precio = number_format($row["precio_ud"], 2, '.', '');
+            // $precio = sprintf('%.2f', $row["precio_ud"]);
+            $imagen = $row["imagen"];
+
+            echo '<div class="col-6 col-md-4 col-lg-3 col-xl-3">';
+            echo '    <div class="producto my-3 px-3 py-3 d-flex flex-column align-items-center" data-price="' . $precio . '">';
+            echo '        <img class="img-fluid" src="' . $imagen . '">';
+            echo '        <h2 class="nombre">' . $nombre . '</h2>';
+            echo '        <p class="description"> ' . $descripcion . '</p>';
+            echo '        <div class="precio">';
+            echo '            <h3 class="price">' . $precio . '€'.'</h3>';
+            echo '            <a href="#"><img class="carro" src="./img/carro-blanco.png" /></a>';
+            echo '        </div>';
+            echo '    </div>';
+            echo '</div>';
+        }
+    } else {
+        echo "No hay productos disponibles.";
+    }
+
+// Cerrar la conexión
+$conn = null;
+?>
             </div>
         </div>
     </div>
